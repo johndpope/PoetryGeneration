@@ -91,13 +91,15 @@ def get_poems(poem_links):
         poems[title] = poem
     return poems
 
+
 ############################
 # CODE STARTS EXECUTION HERE
 ############################
-args = load_args()
-main_soup = get_page_source(args.url)
-page_links = get_search_page_links(main_soup)
-poem_links = get_poem_links(page_links)
-poems = get_poems(poem_links)
-for title, poem in poems.items():
-    print(title,':\n', poem)
+if name == '__main__':
+    args = load_args()
+    main_soup = get_page_source(args.url)
+    page_links = get_search_page_links(main_soup)
+    poem_links = get_poem_links(page_links)
+    poems = get_poems(poem_links)
+    for title, poem in poems.items():
+        print(title,':\n', poem)
