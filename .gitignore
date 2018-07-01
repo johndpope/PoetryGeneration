@@ -4,3 +4,9 @@ DS_Store*
 # Environment
 .env/*
 .poetry_env/*
+
+Transformer/.env/*
+SeqGan/.env/*
+torch-rnn/.env/*
+
+*.pyc
